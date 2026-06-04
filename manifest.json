@@ -1,0 +1,17 @@
+{
+"manifest_version": 3,
+"name": "Homelab Monitor",
+"version": "1.0",
+"description": "Check homelab service status from Prometheus",
+"permissions": ["activeTab"],
+"host_permissions": [
+"http://192.168.1.4:9090/*",
+"http://192.168.1.4:3000/*",
+"http://192.168.1.4:50000/*",
+"http://192.168.1.4:9100/*"
+],
+"action": {
+"default_popup": "popup.html",
+"default_title": "Homelab Monitor"
+}
+}

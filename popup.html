@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Homelab Monitor</title>
+<style>
+body {
+font-family: Arial;
+width: 280px;
+padding: 15px;
+}
+h2 {
+margin-top: 0;
+}
+.service {
+margin: 10px 0;
+padding: 8px;
+border-radius: 6px;
+background: #f2f2f2;
+}
+.up {
+color: green;
+font-weight: bold;
+}
+.down {
+color: red;
+font-weight: bold;
+}
+</style>
+</head>
+<body>
+<h2>Homelab Status</h2>
+
+<div class="service">Jenkins: <span id="jenkins">Checking...</span></div>
+<div class="service">Prometheus: <span id="prometheus">Checking...</span></div>
+<div class="service">Node Exporter: <span id="node">Checking...</span></div>
+
+<hr>
+
+<a href="http://192.168.1.4:3000" target="_blank">Open Grafana</a><br>
+<a href="http://192.168.1.4:9090" target="_blank">Open Prometheus</a><br>
+<a href="http://192.168.1.4:50000" target="_blank">Open Jenkins</a>
+
+<script src="popup.js"></script>
+</body>
+</html>
