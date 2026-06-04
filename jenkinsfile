@@ -2,13 +2,6 @@ pipeline {
 agent any
 
 stages {
-
-stage('Checkout') {
-steps {
-git 'https://github.com/wernerkwah/Homelab-browser-extension.git'
-}
-}
-
 stage('Validate Files') {
 steps {
 sh '''
@@ -24,11 +17,9 @@ stage('Deploy') {
 steps {
 sh '''
 mkdir -p /var/www/homelab-extension
-
 cp manifest.json /var/www/homelab-extension/
 cp popup.html /var/www/homelab-extension/
 cp popup.js /var/www/homelab-extension/
-
 echo "Deployment Complete"
 '''
 }
@@ -38,10 +29,4 @@ echo "Deployment Complete"
 post {
 success {
 echo 'Deployment Successful'
-}
-
-failure {
-echo 'Deployment Failed'
-}
-}
 }
