@@ -26,3 +26,6 @@ element.className = "down";
 checkService("jenkins", "jenkins-status");
 checkService("prometheus", "prometheus-status");
 checkService("node-exporter", "node-status");
+
+document.getElementById("last-checked").textContent =
+new Date().toLocaleTimeString();
