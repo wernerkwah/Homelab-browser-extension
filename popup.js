@@ -22,3 +22,7 @@ element.textContent = "ERROR";
 element.className = "down";
 }
 }
+
+checkService("jenkins", "jenkins-status");
+checkService("prometheus", "prometheus-status");
+checkService("node", "node-status");
